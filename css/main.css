@@ -1,0 +1,1315 @@
+/* ******************************************************************** */
+/*************************** LES COULEURS *******************************/
+/********************************************************************** */
+
+:root{
+
+/* LES COULEURS fonds */
+    --col_fnd_site:#e4cab7;
+    --col_fnd_page:#fff;
+    --col_fnd_nav:#80445a;
+
+/* LES COULEURS textes*/
+    --col_txt:#4d4148;
+    --col_txt_v:#80445a;
+
+/* LES COULEURS bordures */
+    --col_bord:#80445a;
+
+/* LES COULEURS boutons*/
+    --col_btn:#80445a;
+    --col_btn_surv:#e4cab7;
+
+/* LES COULEURS texte bouton*/
+    --col_txt_btn:#fff;
+    --col_txt_btn_surv:#80445a;
+
+/* LES COULEURS boutons responsive de la nav*/
+    --col_resp_btn:#fff;
+    --col_resp_btn_surv:#e4cab7;
+    --col_resp_txt_btn:#80445a;
+    --col_resp_txt_btn_surv:#80445a;
+
+/* LES COULEURS carroussel*/
+    --col_bandeau_leg:rgb(128, 68, 90, 0.5);
+    --col_leg:#fff;
+}
+
+
+/* ******************************************************************** */
+/**************************** LES POLICES *******************************/
+/********************************************************************** */
+
+@font-face{
+    font-family: "dancing_script_regular";
+    src: url("../fonts/Dancing_script/DancingScript-Regular.ttf") format('truetype');
+}
+
+@font-face{
+    font-family: "gotu";
+    src: url("../fonts/Gotu/Gotu-Regular.ttf") format('truetype');
+}
+
+@font-face{
+    font-family: "nunito_regular";
+    src: url("../fonts/Nunito/Nunito-Regular.ttf") format('truetype');
+}
+
+
+/* ******************************************************************** */
+/****************************** LE BODY *********************************/
+/********************************************************************** */
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-top: 240px;
+    background-color:var(--col_fnd_site);
+    background-color:var(--col_fnd_page);
+    font-family:"nunito_regular";
+    font-size: 1rem;
+    color: var(--col_txt);
+}
+
+
+/* ******************************************************************** */
+/****************************** LA PAGE *********************************/
+/********************************************************************** */
+
+.page{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 20px ;
+    padding-bottom: 60px;
+    font-family:"nunito_regular";
+    font-size: 1rem;
+    width: 100%;
+    background-color:var(--col_fnd_page);
+    color: var(--col_txt);
+}
+
+
+/* ******************************************************************** */
+/****************************** HEADER *********************************/
+/********************************************************************** */
+
+header{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top:0;
+    /* pour faire passer bandeau derrière la nav */
+    z-index: 2;
+}
+
+
+/***** HEADER le bandeau *****/
+
+div.bandeau{
+    width: 100vw;
+    height: 200px;
+    background-image: url(../images/element/bandeau_fleurs.svg);
+    background-color: var(--col_fnd_site);
+    background-position: center;
+    background-size: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* pour cacher le rond qui dépasse */
+    overflow: hidden;
+} 
+
+
+/***** HEADER le contenu *****/
+
+div.contenu{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin:0;
+    margin-bottom: 160px;
+    padding: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    /* border-radius: 20px 20px 20px 20px; */
+    background-color:var(--col_fnd_page);
+    text-align: left;
+    border: solid 1px var(--col_bord);
+}
+
+
+/***** HEADER le nom *****/
+
+p.nom{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    width: 100%;
+    text-align: center;
+    color:var(--col_txt_v);
+    font-family: "dancing_script_regular";
+    font-size: 2.2rem;
+}
+
+
+/***** HEADER les métiers*****/
+
+p.metier1{
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: "gotu";
+    font-size: 1rem;
+    color:var(--col_txt);
+}
+
+
+/************************ HEADER lA NAVIGATION grande taille écran ***************************/
+
+/* pour enlever le carré input */
+input#burger{
+    display: none;
+}
+
+nav{
+    /* pour avoir la nav sur toute la largeur */
+    width: 100%;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    /* pour faire passar le rond derrière la nav */
+    position: fixed;
+    z-index: 1;
+}
+
+
+/***** gd LA NAVIGATION ul*****/
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--col_fnd_nav);
+    list-style: none;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+}
+
+
+/***** gd LA NAVIGATION les li*****/
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    margin: 5px;
+    width: 140px;
+    height: 30px;
+    background-color:var(--col_btn);
+    border-radius: 4px;
+}
+
+
+/***** gd LA NAVIGATION les liens*****/
+
+nav ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding: 18px;
+    width: 100%;
+    height: 100%;
+    color: var(--col_txt_btn);
+    text-decoration: none;
+    font-family:"gotu";
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: url('../images/element/tt_petite_fleur.png') 5 5, pointer;
+}
+
+
+/****** LA NAVIGATION les liens survolés******/
+
+nav ul li:hover {
+    background-color:var(--col_btn_surv);
+    color: var(--col_txt_btn_surv);
+    cursor: url('../images/element/tt_petite_fleur.png') 5 5 pointer;
+}
+
+nav ul li a:hover {
+    color: var(--col_txt_btn_surv);
+    cursor: url('../images/element/tt_petite_fleur.png') 5 5 pointer;
+}
+
+
+/***************** HEADER lA NAVIGATION page atterrissage desktop et responsive *********************/
+
+.atterrissage{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* pour que la couleur fonctionne en responsive */
+    height:30px;
+    background-color:var(--col_btn_surv);
+    border-radius: 4px;
+    color:var(--col_txt_btn_surv)
+}
+
+
+/*************************************** HEADER lA NAVIGATION inferieur à 675 *********************/
+
+@media screen AND (max-width:675px){
+
+    input#burger{
+        display: none;
+    }
+    
+    input#burger:checked+label{
+        background-position: -32px;
+    }
+    
+    /* si absent pas de menu visible */
+    input#burger:checked~ul{
+    display: flex;
+    }
+    
+
+    /***** mon interrupteur *****/
+    
+    nav{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background-color: var(--col_fnd_nav);
+    }
+
+    nav label{
+        box-sizing: border-box;
+        margin: 0;
+        margin: 8px;
+        padding: 0;
+        /* si pas de display n'apparait pas */
+        display: block;
+        width: 32px;
+        height: 24px;
+        background-image: url('../images/element/interrupteur.png');
+    }
+    
+
+    /*****pt navigation ul li a *****/
+
+    nav ul{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        /* sert à l'apparition disparition du menu  */
+        display: none;
+    }
+    
+    nav ul li{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 30px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color:var(--col_resp_btn);
+        border-bottom: 1px solid var(--col_bord);
+    }
+    
+    nav ul li a{
+        /* carré entier cliquable et bonne structure html */
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        color: var(--col_resp_txt_btn);
+        text-decoration: none;
+        font-family:"gotu";
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        cursor: url('../images/element/tt_petite_fleur.png') 5 5, pointer;
+    }
+}
+
+
+/* ******************************************************************** */
+/**************************** LE FOOTER *********************************/
+/********************************************************************** */
+
+
+footer{
+    box-sizing: border-box;
+    margin: 0;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: var(--col_txt_btn);
+    background-color: var(--col_fnd_nav);
+    box-sizing: border-box;
+    bottom: 0px;
+    position: fixed;
+    font-family: 'nunito_regular';
+    /* text-transform: uppercase; */
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/** LE FOOTER le paragraphe **/
+
+footer p{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* border-top: dashed 1.5px white;
+    border-bottom: dashed 1.5px white; */
+}
+
+.reseaux{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25px;
+}
+
+.fb{
+    width: 18px;
+}
+
+
+.be{
+    width: 32px;
+}
+
+
+/* ******************************************************************** */
+/*********************** LES BOUTONS D'ACTION ***************************/
+/********************************************************************** */
+
+.bout{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin:0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+
+.bouton {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--col_btn);
+    color: var(--col_txt_btn);
+    font-family:"gotu";
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    height: 30px;
+    width: 240px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+.bouton:hover{ 
+    background-color:var(--col_btn_surv);
+    color: var(--col_txt_btn_surv);
+    height: 30px;
+    width: 240px;
+    cursor: url('../images/element/tt_petite_fleur.png') 5 5, pointer;
+    border: solid 1px var(--col_bord);
+}
+
+
+/************************************************************************/
+/************************** PAGE ACCUEIL ********************************/
+/************************************************************************/
+
+
+section.accueil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.corps1{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 20px;
+}
+
+div.corps2{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* déplacement du bouton */
+    margin-bottom: -100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 20px;
+}
+
+div.coquelicot{
+    width: 400px;
+    height: 400px;
+    background-size: 100%;
+    background-image: url('../images/image_accueil/coquelicot.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.profil{
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 250px;
+    padding: 0;
+    width: 400px;
+    height: 400px;
+    background-size: 80%;
+    background-image: url('../images/image_accueil/profil.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h3{
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-family: "dancing_script_regular";
+    font-size: 2.5rem;
+    color: var(--col_txt_v);
+    font-weight: normal;
+}
+
+blockquote.commentaire1{
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 50px ;
+    padding: 0px;
+    width: 400px;
+    font-size: 0.85rem;
+    font-family:"nunito_regular";
+    text-align: justify ;
+}
+
+cite{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    margin-left: 239px;
+    font-style: normal;
+    font-family: "dancing_script_regular";
+    font-size: 1.5rem;
+    color: var(--col_txt_v);
+}
+
+div.commentaire2{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding: 11px;
+    margin-top: 0px ;
+    width: 400px;
+    background-color:var(--col_fnd_site);
+    font-size: 0.85rem;
+    font-family:"nunito_regular";
+    text-align: justify ;
+}
+
+p.decouverte{
+    font-family: "dancing_script_regular";
+    font-size: 1.5rem;
+    color: var(--col_txt_v);
+    text-align: right;
+}
+
+span{
+    font-weight: bold;
+}
+
+
+/************************** ACCUEIL smarthphone de 0 à 675px *************************/
+    
+@media screen AND (max-width:675px) {
+    
+    div.corps1{
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr;
+    }
+
+    div.corps2{
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr;
+    }
+
+    div.profil{
+        /* margin-bottom: 250px; */
+        margin-bottom: 0px;
+    }
+
+    blockquote.commentaire1{
+        /* margin-top: 50px ; */
+        margin-top: 0px ;
+    }
+
+    div.corps2{
+        /* déplacement du bouton */
+        /* margin-bottom: -100px; */
+        margin-bottom: 0px;
+    }
+
+}
+
+
+/************************************************************************/
+/************************ PAGE ILLUSTRATION *****************************/
+/************************************************************************/
+
+section.illustration{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:20px 20px;  
+}    
+    
+
+/******************** ILUSTRATION smarthphone de 0 à 675px ***************/
+    
+@media screen AND (max-width:675px) {
+    
+    section.illustration{
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr;
+        grid-gap:20px 20px; 
+    }
+}
+
+
+/****************** ILLUSTRATION tablette de 675px à 1024px ***************/
+    
+@media screen AND (min-width:675px) AND (max-width:1024px){
+    
+    section.illustration{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap:20px 20px; 
+    }             
+}  
+
+
+/* ********************************************************************** */
+/*************************** PAGE GRAPHISME *******************************/
+/* ********************************************************************* */
+
+/*********************** PAGE GRAPHISME le carroussel*********************/
+
+/***** LE CARROUSSEL FLECHE *****/
+
+
+
+.fleche_g {
+    box-sizing: border-box;
+    margin: 40px;
+    width: 100px;
+    height:100px;
+    border-right: 50px solid var(--col_bord);
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-radius: 70%;
+    cursor: url('../images/element/tt_petite_fleur.png') 5 5, pointer;
+    user-select: none;
+}
+
+.fleche_d {
+    box-sizing: border-box;
+    margin: 40px;
+    width: 100px;
+    height: 100px;
+    border-left: 50px solid var(--col_bord);
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-radius: 70%;
+    cursor: url('../images/element/tt_petite_fleur.png') 5 5, pointer;
+    user-select: none;
+}
+
+.fleche_g:hover{
+    border-right: 50px solid var(--col_btn_surv);
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+}
+
+.fleche_d:hover{
+    border-left: 50px solid var(--col_btn_surv);
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+}
+
+div.portf{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************** GRAPHISME smarthphone de 0 à 675px ***************/
+    
+@media screen AND (max-width:675px) {
+    
+    .fleche_g {
+        box-sizing: border-box;
+        margin: 2px;
+        width: 30px;
+        height:30px;
+        border-right: 30px solid var(--col_bord);
+        border-bottom: 30px solid transparent;
+        border-top: 30px solid transparent;
+        border-radius: 70%;
+        cursor: url('../images/element/tt_petite_fleur.png') 5 5, pointer;
+        user-select: none;
+    }
+    
+    .fleche_d {
+        box-sizing: border-box;
+        margin: 2px;
+        width: 30px;
+        height: 30px;
+        border-left: 30px solid var(--col_bord);
+        border-bottom: 30px solid transparent;
+        border-top: 30px solid transparent;
+        border-radius: 70%;
+        cursor: url('../images/element/tt_petite_fleur.png') 5 5, pointer;
+        user-select: none;
+    }
+    
+    .fleche_g:hover{
+        border-right: 30px solid var(--col_btn_surv);
+        border-bottom: 30px solid transparent;
+        border-top: 30px solid transparent;
+    }
+    
+    .fleche_d:hover{
+        border-left: 30px solid var(--col_btn_surv);
+        border-bottom: 30px solid transparent;
+        border-top: 30px solid transparent;
+    }
+   
+}
+
+/***** LE CARROUSSEL div carroussel *****/
+
+div.carroussel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/***** LE CARROUSSEL fenêtre *****/
+
+div.fenetre {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px 10px 10px 10px ;
+    /* pour le bandeau qui dépasse */
+    overflow: hidden;
+}
+
+
+/***** LE CARROUSSEL train *****/
+
+div.train{
+    display: flex;
+    width: 6800px;
+    height: 400px;
+}
+
+
+/***** LE CARROUSSEL train en pause au survol de la souris *****/
+
+div.train:hover{
+    cursor: url('../images/element/tt_petite_fleur.png') 5 5, pointer;
+}
+
+
+
+/****** LE CARROUSSEL wagon même taille que fenêtre ******/
+
+figure.wagon{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    /*pour éviter que figcaption déborde  */
+    overflow: hidden;
+}
+
+
+/****** LE CARROUSSEL les photos ******/
+
+figure.graphisme1{
+    background-image:url('../images/graphisme/graphisme_typographie.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+figure.graphisme2{
+    background-image:url('../images/graphisme/graphisme_factory.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+figure.graphisme3{
+    background-image:url('../images/graphisme/graphisme_logo_thot.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+figure.graphisme4{
+    background-image:url('../images/graphisme/graphisme_plaquette_thot.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+figure.graphisme5{
+    background-image:url('../images/graphisme/graphisme_maquette_mobile_thot.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+figure.graphisme6{
+    background-image:url('../images/graphisme/graphisme_maquette_desktop_thot.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+figure.graphisme7{
+    background-image:url('../images/graphisme/graphisme_logo_pollita.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+figure.graphisme8{
+    background-image:url('../images/graphisme/graphisme_pollita_ext.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+figure.graphisme9{
+    background-image:url('../images/graphisme/graphisme_pollita_int.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+figure.graphisme10{
+    background-image:url('../images/graphisme/graphisme_logo_pandart.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+figure.graphisme11{
+    background-image:url('../images/graphisme/graphisme_pandart_packaging.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+figure.graphisme12{
+    background-image:url('../images/graphisme/graphisme_pandart_flyer.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+figure.graphisme13{
+    background-image:url('../images/graphisme/graphisme_logo_alert.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+figure.graphisme14{
+    background-image:url('../images/graphisme/graphisme_packaging_alert.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+figure.graphisme15{
+    background-image:url('../images/graphisme/graphisme_yogitea.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+figure.graphisme16{
+    background-image:url('../images/graphisme/graphisme_paysage_onirique.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+
+/**************** LE CARROUSSEL la légende ************************/
+
+figure figcaption{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding: 15px 0;
+    width:100%;
+    background-color:var(--col_bandeau_leg);
+    color:var(--col_leg);
+    font-family: "nunito_regular";
+    font-size: 0.8rem;
+    font-weight: normal ;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* ********************************************************************** */
+/**************************** PAGE ANIMATION ******************************/
+/* ********************************************************************* */
+
+/****** PAGE ANIMATION les animations ******/
+
+div.anim{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* pour corriger le margin par rapport aux autres pages */
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/************************ PAGE ANIMATION le flipbook ********************/
+
+div.flipbook{
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    background-image: url(../images/animation/pissenlitanim.gif);
+    background-size: contain;
+    background-repeat: no-repeat ;
+    background-color:#fdfeec;
+    background-position: center;
+}
+    
+
+/***************************PAGE ANIMATION la souris************************/
+
+div.bouge{
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 400px;
+    height: 400px;
+    padding: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(230, 94, 198, 0.459);
+    overflow: hidden;
+}
+
+div.souris { 
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height:180px;
+    background-color:white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 1px rgba(230, 94, 198, 0.288) ;
+    animation: animsouri 6s infinite ;
+}
+
+div.molette{  
+    width: 10px;
+    height:40px;
+    margin-top: 20px;
+    background-color:tomato;
+    box-shadow: 5px 1px 1px rgba(255, 99, 71, 0.418);
+    border-radius: 10px;
+    }
+
+@keyframes animsouri {
+    0% {transform:translate(0,0);}
+
+    50% {transform:translate(0,0);}
+
+    67% {transform:translate(0px,-25px);}
+
+    83% {transform:translate(0px,10px) ;}
+
+    100% {transform:translate(0px,0px);}
+    }
+
+
+/************************** PAGE ANIMATION le bus ***********************/
+
+div.bus{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    background-color: rgb(71, 199, 171);
+    overflow: hidden;
+}
+
+div#soleil{
+    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: rgb(243, 190, 18);
+    height:60px ; 
+    width:60px;
+    box-shadow: 0 0 20px  rgb(155, 121, 10);
+}
+
+div#colline{
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    box-sizing: border-box;
+    height:200px ; 
+    width:400px;
+    border-radius: 200px 200px 0px 0px;
+    background: linear-gradient(30deg,
+     rgb(48, 90, 55), rgb(75, 214, 98));
+    box-shadow: 0 0 5px  rgb(155, 121, 10);   
+}
+
+div#route{
+    position: absolute;
+    bottom: 0px;
+    box-sizing: border-box;
+    background-color: rgb(47, 41, 56);
+    height:40px ; 
+    width:100%;   
+}
+
+div.vitre{
+    position: absolute;
+    background-color: white;
+    height:30px ; 
+    width:30px;
+    border-radius: 50%;
+    bottom: 50px;
+}
+
+div.v1{
+   left:10px;
+}
+
+div.v2{
+    left:60px;
+}
+
+div.v3{
+    left:110px;
+}
+
+div.v4{
+    right:10px;
+}
+
+div#voiture{
+    position: absolute;
+    bottom: 30px;
+    box-sizing: border-box;
+    background-color: rgb(42, 17, 184);
+    height:100px ; 
+    width:200px;
+    border-radius: 30px 30px 0px 0px;
+    animation: animvoiture 15s linear infinite ;
+}
+
+div.roue{
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    box-sizing: border-box;
+    background-color: rgb(92, 27, 65);
+    height:20px; 
+    width:200px;
+    box-shadow: 0 5px 10px   rgb(24, 21, 29);    
+}
+
+div#roueg{
+    position: absolute;
+    display: flex;
+    bottom: -10px;
+    left: -10px;
+    box-sizing: border-box;
+    background-color: rgb(184, 17, 114, 0.5);
+    border: 2px solid black;
+    height:40px ; 
+    width:40px;
+    border-radius: 50%;
+    animation: animroueg 3s linear infinite ;
+    box-shadow: 0 1px 10px   rgb(24, 21, 29);    
+}
+
+div#janteg{
+    justify-content: center;
+    align-self: center;
+    box-sizing: border-box;
+    background-color:white;
+    height:5px ; 
+    width:40px;
+}
+
+div#roued{
+    position: absolute;
+    display: flex;
+    bottom: -10px;
+    right:-10px;
+    box-sizing: border-box;
+    background-color: hsl(34, 83%, 39%, 0.5);
+    border: 2px solid black;
+    height:40px ; 
+    width:40px;
+    border-radius: 50%;
+    animation: animroued 3s linear infinite ;
+    box-shadow: 0 1px 10px   rgb(24, 21, 29);
+}
+
+div#janted{  
+    justify-content: center;
+    align-self: center;
+    box-sizing: border-box;
+    background-color:white;
+    height:5px ; 
+    width:40px;
+}
+
+@keyframes animvoiture{
+    0% {transform: translateX(-210px);}
+    100% {transform: translateX(500px);}
+}
+
+@keyframes animroueg{
+    100% {transform: rotate(360deg);}
+}
+@keyframes animroued{
+    100% {transform: rotate(360deg);}
+}
+
+
+/*************************** PAGE ANIMATION les caracteristiques ******************/
+
+div.caracteristique{
+    box-sizing: border-box;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color:rgb(121, 19, 82);
+    color: white;
+    perspective: 800px;
+}
+
+div.cube{
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;  
+    position: relative;
+    animation: animCube 25s linear infinite ;
+}
+
+div.cube div{
+    position: absolute;
+    box-shadow: 0 0 10px  hsla(90,50%, 75%);
+    width: 200px;
+    height: 200px;
+    border:1px solid white;
+    background-size: cover;
+}
+
+div.cube div.front{
+    background-image: url('../images/animation/perso_Page_1.jpg');
+    transform:translateZ(100px);
+}
+
+div.cube div.left{
+    background-image: url('../images/animation/perso_Page_2.jpg');
+    transform:rotateY(90deg) translateZ(100px);
+}
+
+div.cube div.right{
+    background-image: url('../images/animation/perso_Page_3.jpg');
+    transform:rotateY(-90deg) translateZ(100px);
+}
+
+div.cube div.back{
+    background-image: url('../images/animation/perso_Page_4.jpg');
+    transform:rotateY(180deg) translateZ(100px);
+
+}
+div.cube div.top{
+    transform:rotateX(90deg) translateZ(100px);
+}
+
+div.cube div.bottom{
+    transform:rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes animCube{
+    0%{transform: rotateY(0) rotateX(0) rotateZ(0);}
+    50% {transform: rotateY(360deg) rotateX(360deg) rotateZ(0deg);}
+    100% {transform: rotateY(360deg) rotateX(0deg) rotateZ(360deg);}
+}
+
+
+/*********************************************************************** */
+/*************************** PAGE PRODUIT *******************************/
+/********************************************************************** */
+
+
+section.produit{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:20px 20px; 
+}    
+   
+
+/*******************PRODUIT smarthphone de 0 à 675px **********************/
+    
+@media screen AND (max-width:675px) {
+    
+    section.produit{
+        grid-template-columns:1fr;
+        grid-gap:20px 20px; 
+    }
+}
+  
+
+/****************PRODUIT tablette de 675px à 1024px ***********************/
+    
+@media screen AND (min-width:675px) AND (max-width:1024px){
+    
+    section.produit{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:20px 20px;
+    }             
+}  
+
+
+/*********************************************************************** */
+/***************************** PAGE CV************************************/
+/********************************************************************** */
+
+.pngcv{
+    width: 800px;
+    height:1132px;
+    background-image: url(../documents/CVFlorianeFenouillatGraphiste.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+/********************CONTACTsmarthphone de 0 à 675px **********************/
+    
+@media screen AND (max-width:675px) {
+    
+    .pngcv{
+        width: 400px;
+        height:566px;
+        background-image: url(../documents/CVFlorianeFenouillatGraphiste.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+/*********************************************************************** */
+/***************************** PAGE CONTACT************************************/
+/********************************************************************** */
+
+div.profil2{
+    margin-top: -270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.profil2 p{
+    width: 392px;
+    text-align: justify;
+
+}
+
+@media screen AND (max-width:675px) {
+    
+
+div.profil2{
+            margin-top: -20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+}
