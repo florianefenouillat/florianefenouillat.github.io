@@ -421,6 +421,13 @@ footer p{
     width: 32px;
 }
 
+/************************** FOOTER smarthphone de 0 à 675px *************************/
+    
+@media screen AND (max-width:675px) {
+    footer p{font-size: 0.7rem;}
+}
+
+
 
 /* ******************************************************************** */
 /*********************** LES BOUTONS D'ACTION ***************************/
@@ -717,6 +724,8 @@ div.portf{
     .fleche_g {
         box-sizing: border-box;
         margin: 2px;
+        margin-top: 457px;
+        margin-right:-180px;
         width: 30px;
         height:30px;
         border-right: 30px solid var(--col_bord);
@@ -730,6 +739,8 @@ div.portf{
     .fleche_d {
         box-sizing: border-box;
         margin: 2px;
+        margin-top: 457px;
+        margin-left:-180px;
         width: 30px;
         height: 30px;
         border-left: 30px solid var(--col_bord);
